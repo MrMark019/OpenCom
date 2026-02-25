@@ -1,0 +1,20 @@
+version: '3.8'
+
+services:
+  serial-debugger:
+    build: .
+    container_name: serial-debugger
+    ports:
+      - "8000:8000"
+    environment:
+      - PYTHONUNBUFFERED=1
+      - LOG_LEVEL=info
+    volumes:
+      # Mount serial devices (Linux only)
+      - /dev:/dev
+    devices:
+      # Allow access to serial ports (Linux only)
+      - /dev/ttyUSB0:/dev/ttyUSB0
+      - /dev/ttyACM0:/dev/ttyACM0
+    privileged: true  # Required for serial port access
+    restart: unless-stopped

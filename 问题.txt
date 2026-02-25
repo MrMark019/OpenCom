@@ -1,0 +1,21 @@
+  问题总结：
+
+  1. 页面空白（主要问题）
+
+  start.py 用 file:// 协议打开 frontend/dist/index.html，但 Vite 构建出来的资源路径是绝对路径 /assets/...。用 file://
+  打开时浏览器找不到这些资源，React 无法加载，页面空白。
+
+  修复方法：在 vite.config.ts 加 base: './' 后重新 npm run build，或者让后端直接 serve 静态文件（更推荐）。
+
+  2. CLI bug（已修复）
+
+  backend/cli/commands.py 里 open 和 send 命令的 --bytesize 和 --stopbits 选项用了 click.Choice([5, 6, 7, 8]) 传整数，但
+   Click 要求必须是字符串列表。导致这两个命令完全崩溃，连 --help 都报错。
+
+  已修复为 click.Choice(['5', '6', '7', '8']) 和 click.Choice(['1', '1.5', '2'])，并在 config dict 里加了 int(bytesize)
+  / float(stopbits) 转换。
+
+  3. 运行环境
+
+  python start.py 需要在 Windows 的 PowerShell/CMD 里运行，不是 WSL。项目的 venv 是 Windows
+  的（Scripts/python.exe），WSL 里无法执行。
