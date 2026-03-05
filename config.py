@@ -4,7 +4,7 @@ from pathlib import Path
 # Application configuration
 APP_NAME = "Serial Debugger"
 APP_VERSION = "0.1.0"
-APP_DESCRIPTION = "XCOM V2.6 compatible serial debugger with CLI enhancements"
+APP_DESCRIPTION = "OpenCom serial debugger with CLI enhancements"
 
 # Default settings
 DEFAULT_BAUD_RATE = 9600

@@ -98,6 +98,9 @@ logs/
 *.log
 
 # Environment variables
+
+# Release builds
+release/
 .env
 .env.local
 .env.development.local

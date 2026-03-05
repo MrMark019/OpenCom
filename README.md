@@ -1,6 +1,6 @@
 # Serial Debugger
 
-XCOM V2.6 compatible serial debugger with enhanced CLI functionality.
+OpenCom serial debugger with enhanced CLI functionality.
 
 ## Features
 
@@ -198,5 +198,5 @@ Contributions are welcome! Please feel free to submit a Pull Request.
 
 ## Acknowledgments
 
-- Inspired by XCOM V2.6 serial debugger
+- OpenCom - Open Source Serial Communication Tool
 - Built with FastAPI and React

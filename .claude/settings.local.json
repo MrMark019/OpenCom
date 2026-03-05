@@ -1,0 +1,41 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(source venv/bin/activate 2>/dev/null || true && python -c \"import fastapi, uvicorn, serial, click; print\\('deps OK'\\)\" 2>&1)",
+      "Bash(python3:*)",
+      "Bash(/mnt/d/MarkLab/test_kkcode/OpenCom/venv/Scripts/python.exe:*)",
+      "Bash(cmd.exe:*)",
+      "Bash(which python3 && python3 --version && pip3 --version 2>&1)",
+      "Bash(cd D:/MarkLab/test_kkcode/OpenCom && venv/Scripts/python.exe -m serial_tool list 2>&1)",
+      "Bash(cd D:/MarkLab/test_kkcode/OpenCom && venv/Scripts/pip.exe show serial-tool 2>&1)",
+      "Bash(cd D:/MarkLab/test_kkcode/OpenCom && venv/Scripts/serial-tool.exe list 2>&1)",
+      "Bash(cd D:/MarkLab/test_kkcode/OpenCom && chcp 65001 && venv/Scripts/serial-tool.exe list 2>&1)",
+      "Bash(head:*)",
+      "Bash(cd D:/MarkLab/test_kkcode/OpenCom && PYTHONIOENCODING=utf-8 venv/Scripts/python.exe -c \"\nimport serial.tools.list_ports\nfor p in serial.tools.list_ports.comports\\(\\):\n    print\\(repr\\(p.description\\)\\)\n\" 2>&1)",
+      "Bash(cd D:/MarkLab/test_kkcode/OpenCom && PYTHONIOENCODING=utf-8 venv/Scripts/serial-tool.exe list 2>&1)",
+      "Bash(cd D:/MarkLab/test_kkcode/OpenCom && PYTHONIOENCODING=utf-8 venv/Scripts/serial-tool.exe send --help 2>&1)",
+      "Bash(cd D:/MarkLab/test_kkcode/OpenCom && PYTHONIOENCODING=utf-8 venv/Scripts/serial-tool.exe send -p COM3 \"Hello World\" --timeout 2 2>&1)",
+      "Bash(cd D:/MarkLab/test_kkcode/OpenCom && PYTHONIOENCODING=utf-8 venv/Scripts/serial-tool.exe send -p COM99 \"Hello World\" 2>&1)",
+      "Bash(git add:*)",
+      "Bash(git remote:*)",
+      "Bash(git commit:*)",
+      "Bash(git config:*)",
+      "Bash(git push:*)",
+      "Bash(git init:*)",
+      "Bash(git branch:*)",
+      "Bash(pip install:*)",
+      "Bash(pyinstaller:*)",
+      "Bash(npm install:*)",
+      "Bash(npm run:*)",
+      "Bash(cp:*)",
+      "Bash(rm:*)",
+      "Bash(ls:*)",
+      "Bash(sed:*)",
+      "Bash(python:*)",
+      "Bash(curl:*)",
+      "Bash(taskkill:*)",
+      "Bash(./serial-backend.exe 8002:*)",
+      "Bash(./test_ports.exe:*)"
+    ]
+  }
+}

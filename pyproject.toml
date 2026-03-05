@@ -3,9 +3,9 @@ requires = ["setuptools>=45", "wheel", "setuptools_scm[toml]>=6.2"]
 build-backend = "setuptools.build_meta"
 
 [project]
-name = "serial-tool"
+name = "opencom"
 version = "0.1.0"
-description = "XCOM V2.6 compatible serial debugger with CLI enhancements"
+description = "OpenCom serial debugger with CLI enhancements"
 authors = [{name = "OpenCom Team", email = "team@opencom.dev"}]
 readme = "README.md"
 requires-python = ">=3.9"
